@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview</title>
+</head>
+<body>
+    <h2>Live Interview Webcam</h2>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+
+    <h3>Interview Question</h3>
+    <p id="question">Click below to get a question.</p>
+    <button id="newQuestion">Get Question</button>
+
+    <h3>Record Your Answer</h3>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <audio id="audioPlayback" controls></audio>
+    <p id="feedback"></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
